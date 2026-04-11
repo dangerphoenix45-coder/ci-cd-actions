@@ -1,9 +1,10 @@
-name : myworkflow
+name: myworkflow
+
 on: push
+
 jobs:
   build:
-   runs-on: ubuntu-latest
-   steps:
-    - name: build
-      run : echo "hello, ${{vars.MY_NAME}}"
- 
+    runs-on: ubuntu-latest
+    steps:
+      - name: build
+        run: echo "hello, ${{ vars.MY_NAME }}"
