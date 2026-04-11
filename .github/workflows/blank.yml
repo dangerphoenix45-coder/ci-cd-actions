@@ -5,4 +5,7 @@ jobs:
    runs-on: ubuntu-latest
    steps:
      - name : hellostep
-       run : echo "welcome to github bruh"
+       run : |
+        echo "first ci pipeline"
+        echo "it is working"
+         
