@@ -1,5 +1,8 @@
 name : myworkflow
-on: push
+on: push:
+      branches:
+        - main
+        - test
 jobs:
   build:
    runs-on: ubuntu-latest
