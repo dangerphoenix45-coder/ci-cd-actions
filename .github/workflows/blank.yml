@@ -1,0 +1,8 @@
+name : myworkflow
+on: workflow_dispatch
+jobs:
+  myjob:
+   runs-on: ubuntu-latest
+   steps:
+     - name : hellostep
+       run : echo "welcome to github bruh"
