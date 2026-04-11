@@ -1,11 +1,19 @@
 name : myworkflow
 on: workflow_dispatch
 jobs:
-  myjob:
+  build:
    runs-on: ubuntu-latest
    steps:
-     - name : hellostep
-       run : |
-        echo "first ci pipeline"
-        echo "it is working"
-         
+    - name: build
+      run : echo "hello"
+  test:
+    runs-on: ubuntu-latest
+    steps: 
+     - name : test
+       run : echo "job executed succesfully"
+  deploy:
+    runs-on:  ubuntu-latest
+    steps:
+     - name : deploy the app
+       run : echo "deploying the app"
+    
