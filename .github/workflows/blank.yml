@@ -3,8 +3,10 @@ name: myworkflow
 on: push
 
 jobs:
-  build:
+  action-demo:
     runs-on: ubuntu-latest
     steps:
-      - name: build
-        run: echo "hello karthik, ${{ vars.MY_NAME }}"
+      - name: check code
+        uses : actions/checkout@v4
+      - name: print code 
+        run: cat index.html
