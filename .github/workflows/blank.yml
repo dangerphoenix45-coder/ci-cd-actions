@@ -4,9 +4,14 @@ on:
   workflow_dispatch:
     inputs:
       environment:
-        description: "Choose environment (default: dev)"
+        description: "Choose environment"
         required: true
         default: dev
+        type: choice
+        options:
+          - dev
+          - test
+          - prod
 
 jobs:
   inputs-demo:
@@ -14,4 +19,3 @@ jobs:
     steps:
       - name: deploy the app
         run: echo "deploy app to ${{ github.event.inputs.environment }}"
-
