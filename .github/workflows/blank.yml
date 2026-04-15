@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       environment:
-        description: Choose environment (default: dev)
+        description: "Choose environment (default: dev)"
         required: true
         default: dev
 
@@ -14,3 +14,4 @@ jobs:
     steps:
       - name: deploy the app
         run: echo "deploy app to ${{ github.event.inputs.environment }}"
+
