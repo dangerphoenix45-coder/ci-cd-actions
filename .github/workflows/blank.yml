@@ -4,9 +4,24 @@ on:
   push:
 
 jobs: 
-  helloworld:
+  build:
     runs-on: ubuntu-latest
     steps: 
-      - name: hello
-        run: echo "hello world"
+      - name: build
+        run: echo "build"
+
+  test:
+    needs: build   # 👈 test waits until build finishes successfully
+    runs-on: ubuntu-latest
+    steps: 
+      - name: test
+        run: echo "test"
+
+  deploy:
+    needs: test    # 👈 deploy waits until test finishes successfully
+    runs-on: ubuntu-latest
+    steps: 
+      - name: deploy
+        run: echo "deploy"
+
 
