@@ -1,3 +1,4 @@
+name : inputpractice
 on:
   workflow_dispatch:
     inputs:
