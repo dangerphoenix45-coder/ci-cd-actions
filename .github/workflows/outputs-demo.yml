@@ -19,4 +19,5 @@ jobs:
     steps:
       # Other job usage
       - run: echo "Other job: ${{ needs.build.outputs.version }}"
+      
 
